@@ -1,4 +1,5 @@
-README
+# Intersection API
+
 This is an Express-NodeJS application that implements an Intersections API. The API takes a POST request with a GeoJSON linestring and finds intersections with 50 randomly generated lines on the plane.
 
 The API requires a header X-API-KEY with a value 'secret' for authentication. It returns a JSON array of objects, each containing a lineId and a point property. The lineId is a string representing the id of the intersecting line, from L01 to L50. The point is an array of two numbers representing the longitude and latitude of the intersection point.
