@@ -16,7 +16,7 @@ app.use(express.json());
 
 const AUTH_HEADER = 'X-API-KEY';
 const AUTH_VALUE = 'secret';
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Generating 50 random lines with ids from L01 to L50
 const randomLines = [];
@@ -74,6 +74,6 @@ app.post('/intersections', (req, res) => {
   res.status(200).json(intersections);
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });
